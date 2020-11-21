@@ -112,11 +112,13 @@ namespace Lab6.Controllers
         /// <param id="id"></param>
         /// <returns>An updated Student</returns>
         /// <response code="200">Returns the updated Student</response>
+        /// <response code="400">If the id is malformed</response>   
         /// <response code="404">If the Student with matching id is not found</response>      
         /// <response code="500">Internal error</response>
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<Student>> Update(Guid id, [Bind("FirstName,LastName,Program")] StudentBase studentBase)

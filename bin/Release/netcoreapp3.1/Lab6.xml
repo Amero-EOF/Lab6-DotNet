@@ -61,6 +61,7 @@
              <param id="id"></param>
              <returns>An updated Student</returns>
              <response code="200">Returns the updated Student</response>
+             <response code="400">If the id is malformed</response>   
              <response code="404">If the Student with matching id is not found</response>      
              <response code="500">Internal error</response>
         </member>
