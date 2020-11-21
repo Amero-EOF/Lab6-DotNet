@@ -43,7 +43,7 @@
              <response code="400">If the Student is malformed</response>      
              <response code="500">Internal error</response>
         </member>
-        <member name="M:Lab6.Controllers.StudentsController.Upsert(System.Guid,Lab6.Models.StudentBase)">
+        <member name="M:Lab6.Controllers.StudentsController.Update(System.Guid,Lab6.Models.StudentBase)">
              <summary>
              Updates a Student.
              </summary>
